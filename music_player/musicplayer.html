@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Music Player</title>
+<!-- Load FontAwesome icons -->
+<link rel="stylesheet"
+		href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<!-- Load the custom CSS style file -->
+<link rel="stylesheet" type="text/css" href="musicplayer.css">
+</head>
+
+<body>
+
+
+    <header>
+
+        <nav class="navbar">
+
+            <!-- <a href="" class="nav-branding">PRIT </a> -->
+
+            <ul class="nav-menu">
+				<br>
+                <li class="nav-item">
+                    <a href="" class="nav-link" id="big">Songs</a>
+                </li>
+				<br>
+                <li class="nav-item" >
+					<button id="h11" onclick="ishqwala()">Ishq wala love</button>
+                </li>
+                <li class="nav-item" >
+					<button id="h11" onclick="loveme()">love me like you do x me hoon hero tera</button>
+                </li>
+                <li class="nav-item">
+                    <button id="h11" onclick="ole()">Ole Ole</button>
+                </li>
+                <li class="nav-item" >
+                    <button id="h11" onclick="apna()">Apna bana le</button>
+                </li>
+                <li class="nav-item" >
+                    <button id="h11" onclick="maan()">Maan meri jaan</button>
+                </li>
+                <li class="nav-item">
+                    <button id="h11" onclick="floor()">On the floor</button>
+                </li>
+                <li class="nav-item" >
+                    <button id="h11" onclick="pyaar()">kya mujhe pyaar hai</button>
+                </li>
+                <li class="nav-item" >
+                    <button id="h11" onclick="haaye()">Haaye oye</button>
+                </li>
+                <li class="nav-item">
+                    <button id="h11" onclick="chain()">O mere dil ke chain</button>
+                </li>
+                <li class="nav-item" >
+                    <button id="h11" onclick="jashn()">jashn-bahara</button>
+                </li>
+                <li class="nav-item">
+                    <button id="h11" onclick="itni()">itni si baat hai</button>
+                </li>
+                <li class="nav-item">
+                    <button id="h11" onclick="kesariya()">Kesariya</button>
+                </li>
+                <li class="nav-item">
+                    <button id="h11" onclick="uff()">uff teri adaa</button>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </nav>
+
+    </header>
+<div class="player">
+
+	<!-- Define the section for displaying details -->
+	<div class="details">
+	<div class="now-playing">PLAYING x OF y</div>
+	<div class="track-art"></div>
+	<div class="track-name">Track Name</div>
+	<div class="track-artist">Track Artist</div>
+	</div>
+
+	<!-- Define the section for displaying track buttons -->
+	<div class="buttons">
+	<div class="prev-track" onclick="prevTrack()">
+		<i class="fa fa-step-backward fa-2x"></i>
+	</div>
+	<div class="playpause-track" onclick="playpauseTrack()">
+		<i class="fa fa-play-circle fa-5x"></i>
+	</div>
+	<div class="next-track" onclick="nextTrack()">
+		<i class="fa fa-step-forward fa-2x"></i>
+	</div>
+	</div>
+
+	<!-- Define the section for displaying the seek slider-->
+	<div class="slider_container">
+	<div class="current-time">00:00</div>
+	<input type="range" min="1" max="100"
+		value="0" class="seek_slider" onchange="seekTo()">
+	<div class="total-duration">00:00</div>
+	</div>
+
+	<!-- Define the section for displaying the volume slider-->
+	<div class="slider_container">
+	<i class="fa fa-volume-down"></i>
+	<input type="range" min="1" max="100"
+		value="99" class="volume_slider" onchange="setVolume()">
+	<i class="fa fa-volume-up"></i>
+	</div>
+</div>
+<center><h4 id="clr">@ PRIT SUTARIYA</h4></center>
+<!-- <button id="h11" onclick="lk()">ole</button> -->
+
+<!-- Load the main script for the player -->
+<script src="musicplayer.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+body {
+  background-color: rgb(15, 16, 15);
+  /* background-color: lightgreen; */
+  
+  /* Smoothly transition the background color */
+  transition: background-color .5s;
+
+  }
+  /* @keyframes anim{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+} */
+  
+  /* Using flex with the column direction to
+  align items in a vertical direction */
+  .player {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  }
+  
+  .details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+  }
+  
+  .track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  background-image: URL(
+    "https://source.unsplash.com/Qrspubmx6kE/640x360");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15%;
+  }
+  
+  /* Changing the font sizes to suitable ones */
+  .now-playing {
+  font-size: 1rem;
+  }
+  
+  .track-name {
+  font-size: 2rem;
+  color: white;
+  }
+  
+  .track-artist {
+  font-size: 1.5rem;
+  }
+  
+  /* Using flex with the row direction to
+  align items in a horizontal direction */
+  .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+  
+  .playpause-track,
+  .prev-track,
+  .next-track {
+  padding: 25px;
+  opacity: 0.8;
+  
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+  }
+  
+  /* Change the opacity when mouse is hovered */
+  .playpause-track:hover,
+  .prev-track:hover,
+  .next-track:hover {
+  opacity: 1.0;
+  }
+  
+  /* Define the slider width so that it scales properly */
+  .slider_container {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  /* Modify the appearance of the slider */
+  .seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: black;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  }
+  
+  /* Modify the appearance of the slider thumb */
+  .seek_slider::-webkit-slider-thumb,
+  .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+  }
+  
+  /* Change the opacity when mouse is hovered */
+  .seek_slider:hover,
+  .volume_slider:hover {
+  opacity: 1.0;
+  }
+  
+  .seek_slider {
+  width: 60%;
+  background-color: rgb(54, 51, 51);
+  }
+  
+  .volume_slider {
+  width: 30%;
+  background-color: rgb(54, 51, 51);
+  }
+  
+  .current-time,
+  .total-duration {
+  padding: 10px;
+  color: white;
+  }
+  
+  i.fa-volume-down,
+  i.fa-volume-up {
+  padding: 10px;
+  color: white;
+  }
+  
+  /* Change the mouse cursor to a pointer
+  when hovered over */
+  i.fa-play-circle,
+  i.fa-pause-circle,
+  i.fa-step-forward,
+  i.fa-step-backward {
+  cursor: pointer;
+  color: white;
+  height: 20px;  
+  }
+  .now-playing{
+    display: none;
+  }  
+  .m{
+    position: absolute;
+  }
+
+
+#big{
+  font-size: 30px
+}
+#h11{
+  background: none;
+  transition: 1s;
+  border: none;
+  color: white;
+  font-family: Cinzel;
+font-size: 13px
+
+}
+#h11:hover{
+ color: rgb(73, 69, 69)
+}
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Kalam:wght@300&display=swap');
+  *{
+      padding: 0;
+      margin: 0;
+      font-family: Cinzel;
+      /* box-sizing: border-box; */
+  }
+  header{
+      background-color: rgba(15, 16, 15, 0.533);
+      text-align: center;
+      width: min-content;
+      height: min-content;
+      margin-left: 10px;
+      margin-top: 10px;
+      position: absolute;
+  }
+  li{
+      list-style: none;
+  }
+  a{
+      color: white;
+      text-decoration: none;
+  }
+  .navbar{
+      min-height: 50px;
+      /* display: flex; */
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      text-align: center;
+  }
+  .nav-menu{
+      /* display: flex; */
+      /* justify-content: space-between; */
+      align-items: center;
+      gap: 30px;
+      width: 60%;
+      /* margin-left: 40%; */
+      /* margin-right: 60%; */
+  }
+  h1{
+      color: white;
+      /* font-family: 'Combo', cursive; */
+      font-family: 'Cinzel Decorative', cursive;
+  }
+  span{
+      font-size: 12px;
+  }
+  .nav-item{
+      text-align: center;
+  }
+  .nav-link{
+      transition: 0.7s ease;
+  }
+  .nav-link:hover{
+      color: rgb(89, 84, 84);
+  }
+  .hamburger{
+      display: none;
+      cursor: pointer;
+  }
+  .bar{
+      display: block;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: aliceblue;
+      height: 4px;
+      width: 20px;
+      margin: 3px auto;
+  }
+
+  .hamburger{
+    display:block;
+}
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+.nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 40px;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgb(15, 16, 15);
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    transition: 0.3s;
+    justify-content: center;
+}
+.nav-item{
+    margin: 16px 0;
+}
+.nav-menu.active{
+    left: 0;
+}
+#clr{
+    color: rgb(78, 75, 75);
+}
+
+
+  @media (max-width:1168px) {
+      .hamburger{
+          display:block;
+      }
+      .hamburger.active .bar:nth-child(2){
+          opacity: 0;
+      }
+      .hamburger.active .bar:nth-child(1){
+          transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger.active .bar:nth-child(3){
+          transform: translateY(-8px) rotate(-45deg);
+      }
+      .nav-menu{
+          position: fixed;
+          left: -100%;
+          top: 40px;
+          gap: 0;
+          flex-direction: column;
+          background-color:rgba(15, 16, 15, 0.759);
+          width: 50%;
+          height: 100%;
+          text-align: center;
+          transition: 0.3s;
+          justify-content: center;
+      }
+      .nav-item{
+          margin: 16px 0;
+      }
+      .nav-menu.active{
+          left: 0;
+      }
+  }
